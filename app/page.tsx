@@ -75,7 +75,7 @@ export default function Home() {
               asChild
             >
               <a
-                href="https://chatgpt.com/?q=Julio%20Bellano%20Laksana&hints=search"
+                href="https://chatgpt.com/?q=Julio%20Bellano%20Laksana&hints=search&model=auto"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Try Me!"

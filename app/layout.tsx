@@ -6,8 +6,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "My Personal Website",
-  description: "A minimalist personal website",
+  title: "Julio Bellano Laksana 鍾國榮",
+  description: "Get to know me more!",
 }
 
 export default function RootLayout({
