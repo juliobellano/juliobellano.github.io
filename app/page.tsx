@@ -114,7 +114,7 @@ export default function Home() {
                 <MediumIcon className="h-9 w-9" />
               </a>
             </Button>
-            <span className="text-xs text-gray-400">Medium</span>
+            <span className="text-xs text-gray-400">My Blog [Medium]</span>
           </div>
         </div>
       </div>
