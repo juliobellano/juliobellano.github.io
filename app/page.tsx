@@ -23,7 +23,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white">
       <div className="flex flex-col items-center justify-center gap-4 p-4 text-center">
         <Avatar className="h-24 w-24 border-2 border-gray-700">
-          <AvatarImage src="/images/profile.jpg" alt="Julio Bellano Laksana" />
+          <AvatarImage src="placeholder.jpg" alt="Julio Bellano Laksana" />
           <AvatarFallback>JL</AvatarFallback>
         </Avatar>
 
