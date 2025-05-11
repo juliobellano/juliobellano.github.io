@@ -23,7 +23,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white">
       <div className="flex flex-col items-center justify-center gap-4 p-4 text-center">
         <Avatar className="h-24 w-24 border-2 border-gray-700">
-          <AvatarImage src="/placeholder.jpg" alt="Profile picture" className="object-cover"  />
+          <AvatarImage src="/images/profile.jpg" alt="Julio Bellano Laksana" />
           <AvatarFallback>JL</AvatarFallback>
         </Avatar>
 
@@ -71,11 +71,11 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <Button
               variant="outline"
-              className="rounded-full border-gray-700 bg-transparent text-white hover:bg-gray-800 mb-2"
+              className="rounded-full border-gray-700 bg-transparent text-white hover:bg-gray-800 mb-2 pulse-animation relative"
               asChild
             >
               <a
-                href="https://chatgpt.com/?q=Julio%20Bellano%20Laksana&hints=search&model=auto"
+                href="https://chatgpt.com/?q=Julio%20Bellano%20Laksana&hints=search"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Try Me!"
@@ -83,7 +83,7 @@ export default function Home() {
                 <OpenaiIcon className="h-9 w-9" />
               </a>
             </Button>
-            <span className="text-xs text-gray-400">Chat GPT [TRY ME]</span>
+            <span className="text-xs text-gray-400 animate-pulse">Chat GPT [TRY ME]</span>
           </div>
 
           <div className="flex flex-col items-center">
@@ -114,7 +114,7 @@ export default function Home() {
                 <MediumIcon className="h-9 w-9" />
               </a>
             </Button>
-            <span className="text-xs text-gray-400">My Blog [Medium]</span>
+            <span className="text-xs text-gray-400">Medium</span>
           </div>
         </div>
       </div>
