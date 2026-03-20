@@ -62,7 +62,7 @@ const CV: React.FC = () => {
             <p className="text-[10.5pt] text-black leading-[1.55]">
               All-rounder and fast learner computer science graduate with experience <strong>deploying product from 0 to 1</strong> and
               integrating LLMs to solve business challenges. Competed in <strong>2 hackathons</strong>, <strong>1 Kaggle competition</strong>,
-              and shipped a production ready tool to reduce Excel VBA and Minitab processing <strong>500M+ data points
+              and shipped a production ready tool to reduce Excel and Minitab processing <strong>500M+ data points
               daily</strong> at{' '}
               <Link href="https://www.shl-medical.com/">SHL Medical</Link>.
             </p>
@@ -112,7 +112,7 @@ const CV: React.FC = () => {
                 <span className="text-[10pt] text-black">July 2025 – Present</span>
               </div>
               <BulletItem>
-                <strong>Saved 5+ hours weekly</strong> per engineer by reducing Excel VBA and Minitab reliance by <strong>50%</strong>, developing
+                <strong>Saved 5+ hours weekly</strong> per engineer by reducing Excel and Minitab usage by <strong>50%</strong>, developing
                 an internal interactive tool with .NET C#, React, and SQL used to analyze <strong>500M+ datapoints daily</strong>.
               </BulletItem>
               <BulletItem>
@@ -201,7 +201,7 @@ const CV: React.FC = () => {
                   <Link href="https://warungbangjul.vercel.app/">Warung Bang Jul</Link> (Founder), Taiwan
                 </span>
                 <div className="flex items-center gap-3 text-[10pt]">
-                  <Link href="https://lnkd.in/gyRUMErr">Post ↗</Link>
+                  <Link href="https://lnkd.in/gyRUMErr">Demo ↗</Link>
                   <span className="text-black">March 2025</span>
                 </div>
               </div>
