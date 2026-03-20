@@ -7,6 +7,7 @@ import Editor from './components/Editor';
 import SidePanel from './components/SidePanel';
 import FloatingAction from './components/FloatingAction';
 import CV from './pages/CV';
+import CVChinese from './pages/CV_Chinese';
 
 const Home: React.FC = () => (
   <div className="flex flex-col h-screen w-screen overflow-hidden bg-[#F9FBFD]">
@@ -30,7 +31,8 @@ const App: React.FC = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cv" element={<CV />} />
+        <Route path="/cv-english" element={<CV />} />
+        <Route path="/cv-chinese" element={<CVChinese />} />
       </Routes>
     </BrowserRouter>
   );

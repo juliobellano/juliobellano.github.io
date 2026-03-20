@@ -22,7 +22,7 @@ const Link: React.FC<{ href: string; children: React.ReactNode }> = ({ href, chi
   </a>
 );
 
-const CV: React.FC = () => {
+const CVChinese: React.FC = () => {
   return (
     <div className="h-screen bg-[#F9FBFD] flex flex-col overflow-hidden">
       {/* Minimal header bar */}
@@ -32,15 +32,15 @@ const CV: React.FC = () => {
             href="/"
             className="text-[13px] text-[#444746] hover:text-[#1a73e8] hover:bg-gray-100 px-2 py-1 rounded transition-colors"
           >
-            ← Back
+            ← 返回
           </a>
-          <span className="text-[14px] text-[#1f1f1f] font-medium">Julio Bellano — CV</span>
+          <span className="text-[14px] text-[#1f1f1f] font-medium">鍾國榮 Julio Bellano — 個人履歷</span>
         </div>
         <a
-          href="/cv-chinese"
+          href="/cv-english"
           className="text-[13px] text-[#1055CC] hover:underline px-2 py-1"
         >
-          中文
+          English
         </a>
       </div>
 
@@ -51,7 +51,7 @@ const CV: React.FC = () => {
 
           {/* Header */}
           <div className="text-center mb-4">
-            <h1 className="text-[20pt] font-bold text-black">Julio Bellano Laksana</h1>
+            <h1 className="text-[20pt] font-bold text-black">鍾國榮 Julio Bellano Laksana</h1>
             <div className="text-[10pt] text-black mt-1 space-x-1">
               <a href="mailto:juliobellanolaksana@gmail.com" className="text-[#1055CC] hover:underline">
                 juliobellanolaksana@gmail.com
@@ -68,96 +68,88 @@ const CV: React.FC = () => {
           {/* Summary */}
           <div className="mb-5">
             <p className="text-[10.5pt] text-black leading-[1.55]">
-              All-rounder and fast learner computer science graduate with experience <strong>deploying product from 0 to 1</strong> and
-              integrating LLMs to solve business challenges. Competed in <strong>2 hackathons</strong>, <strong>1 Kaggle competition</strong>,
-              and shipped a production ready tool to reduce Excel and Minitab processing <strong>500M+ data points
-              daily</strong> at{' '}
-              <Link href="https://www.shl-medical.com/">SHL Medical</Link>.
+              全方位且學習能力強的資訊工程畢業生，擁有<strong>從零到一部署產品</strong>及整合大型語言模型解決商業問題的經驗。曾參加
+              <strong>2場黑客松</strong>、<strong>1場Kaggle競賽</strong>，並在{' '}
+              <Link href="https://www.shl-medical.com/">SHL Medical</Link>{' '}
+              開發一套生產就緒工具，<strong>每日處理5億以上數據點</strong>，大幅降低對Excel與Minitab的依賴。
             </p>
           </div>
 
           {/* Research Experience */}
-          <Section title="Research Experience">
+          <Section title="研究經歷">
             <div className="mb-3">
               <div className="flex justify-between items-baseline">
                 <span className="text-[10.5pt] font-bold text-black">
-                  TKU Computer Vision and Machine Learning Lab, Taiwan
+                  淡江大學電腦視覺與機器學習實驗室，台灣
                 </span>
-                <span className="text-[10pt] text-black">September 2025</span>
+                <span className="text-[10pt] text-black">2025年9月</span>
               </div>
               <div className="flex justify-between items-baseline mb-1">
-                <span className="text-[10pt] italic text-black">Undergraduate Researcher</span>
+                <span className="text-[10pt] italic text-black">大學部研究員</span>
                 <Link href="https://www.linkedin.com/posts/juliobellano_our-second-smolvla-model-is-performing-pretty-activity-7399113701926162432-UsDU?utm_source=share&utm_medium=member_desktop&rcm=ACoAADagySwBbxd9S9B1tXYFqsTHtIVucwd6j20">
-                  Demo
+                  成果展示
                 </Link>
               </div>
               <BulletItem>
-                <strong>Researched</strong> the potential of Vision-Language-Action (VLA) models, such as smolVLA, π0.5, and
-                Action Chunking Transformers for precision farming in tomato picking.
+                <strong>研究</strong>視覺語言動作模型（VLA）的潛力，包含smolVLA、π0.5及動作分塊Transformer，應用於番茄採摘精準農業。
               </BulletItem>
               <BulletItem>
-                <strong>Contributed</strong> to an open source model (smolVLA){' '}
+                <strong>貢獻</strong>開源模型smolVLA，即{' '}
                 <Link href="https://github.com/huggingface/lerobot">Le-Robot @huggingface</Link>
               </BulletItem>
               <BulletItem>
-                <strong>Trained</strong> VLA models on a cluster of GPUs with graceful failures, checkpoint broadcast, and
-                streaming datasets.
+                在GPU叢集上<strong>訓練</strong>VLA模型，實現優雅的失敗處理、檢查點廣播及串流資料集。
               </BulletItem>
             </div>
           </Section>
 
           {/* Work Experience */}
-          <Section title="Work Experience">
+          <Section title="工作經歷">
             <div className="mb-3">
               <div className="text-[10.5pt] font-bold text-black">
-                <Link href="https://www.shl-medical.com/">Scandinavian Health Limited (SHL Medical)</Link>
+                <Link href="https://www.shl-medical.com/">斯堪地那維亞健康有限公司（SHL Medical）</Link>
               </div>
               <div className="text-[10pt] text-[#444746] mb-0.5">
-                World's no.1 drug delivery device manufacturer (Autoinjectors)
+                全球第一大藥物輸送裝置製造商（自動注射器）
               </div>
               <div className="flex justify-between items-baseline mb-1">
-                <span className="text-[10pt] italic text-black">Software Developer Intern</span>
-                <span className="text-[10pt] text-black">July 2025 – Present</span>
+                <span className="text-[10pt] italic text-black">軟體開發實習生</span>
+                <span className="text-[10pt] text-black">2025年7月 – 至今</span>
               </div>
               <BulletItem>
-                <strong>Saved 5+ hours weekly</strong> per engineer by reducing Excel and Minitab usage by <strong>50%</strong>, developing
-                an internal interactive tool with .NET C#, React, and SQL used to analyze <strong>500M+ datapoints daily</strong>.
+                <strong>每位工程師每週節省5小時以上</strong>，透過開發以.NET C#、React及SQL建置的內部互動工具，將Excel與Minitab使用率降低<strong>50%</strong>，每日分析<strong>5億以上數據點</strong>。
               </BulletItem>
               <BulletItem>
-                <strong>Created, maintained, and deployed</strong> CI/CD pipeline using Microsoft Azure to ensure continuous
-                integration and deployment.
+                <strong>建立、維護並部署</strong>使用Microsoft Azure的CI/CD流水線，確保持續整合與部署。
               </BulletItem>
               <BulletItem>
-                <strong>Migrated</strong> legacy SharePoint API integrations to Microsoft Graph REST API for department-wide
-                information retrieval used by <strong>300+ engineers worldwide</strong> across US, Swiss, and TW offices.
+                <strong>遷移</strong>舊版SharePoint API整合至Microsoft Graph REST API，供<strong>全球300位以上工程師</strong>（美國、瑞士、台灣辦公室）使用。
               </BulletItem>
             </div>
           </Section>
 
           {/* Competitions */}
-          <Section title="Competitions">
+          <Section title="競賽經歷">
             {/* Proactive Live AI Agent */}
             <div className="mb-3">
               <div className="flex justify-between items-baseline">
                 <span className="text-[10.5pt] font-bold text-black">
-                  Proactive Live AI Agent{' '}
+                  主動式即時AI代理{' '}
                   <span className="font-normal text-[10pt]">
                     — <Link href="https://geminiliveagentchallenge.devpost.com/">Google Gemini, Devpost</Link>
                   </span>
                 </span>
-                <span className="text-[10pt] text-black">March 2026</span>
+                <span className="text-[10pt] text-black">2026年3月</span>
               </div>
               <div className="flex items-center gap-3 text-[10pt] text-[#444746] mb-1">
                 <span>Agents ADK · WebSocket · Google Cloud Platform</span>
-                <Link href="https://youtu.be/B17bBNdpYOs">Demo ↗</Link>
+                <Link href="https://youtu.be/B17bBNdpYOs">成果展示 ↗</Link>
               </div>
               <BulletItem>
-                <strong>Architected and shipped</strong> a real-time multimodal Multi-Agent AI cooking assistant <strong>solo in under 48 hours</strong>, orchestrating <strong>4 concurrent LLM models</strong> (Gemini Live API, Flash, Nano Banana, and Pro)
-                into a single seamless conversational session with no perceivable latency.
+                <strong>獨自設計並交付</strong>一個即時多模態多代理AI烹飪助手，<strong>在48小時內完成</strong>，整合<strong>4個並行LLM模型</strong>（Gemini Live API、Flash、Nano Banana及Pro），實現零感知延遲的無縫對話體驗。
               </BulletItem>
               <BulletItem>
-                <strong>Designed and implemented</strong> an <strong>8-tool agent harness</strong> with prompt and context engineering to ensure
-                reliable, grounded responses across long-horizon sessions.
+                <strong>設計並實作8工具代理框架</strong>，結合提示與上下文工程，確保長期對話中的可靠性與準確性。
               </BulletItem>
             </div>
 
@@ -165,16 +157,16 @@ const CV: React.FC = () => {
             <div className="mb-3">
               <div className="flex justify-between items-baseline">
                 <span className="text-[10.5pt] font-bold text-black">
-                  Gemini 3 Hackathon{' '}
+                  Gemini 3 黑客松{' '}
                   <span className="font-normal text-[10pt]">
-                    — <Link href="https://gdg.community.dev/events/details/google-gdg-stanford-presents-stanford-x-deepmind-hackathon-build-with-google-gemini/">Stanford University</Link>
+                    — <Link href="https://gdg.community.dev/events/details/google-gdg-stanford-presents-stanford-x-deepmind-hackathon-build-with-google-gemini/">史丹佛大學</Link>
                   </span>
                 </span>
-                <span className="text-[10pt] text-black">February 2026</span>
+                <span className="text-[10pt] text-black">2026年2月</span>
               </div>
               <div className="flex items-center gap-3 text-[10pt] text-[#444746]">
-                <span>Agentic Coding Tools · Google Cloud Platform</span>
-                <Link href="https://youtu.be/zraaiLWaCUM">Demo ↗</Link>
+                <span>智能代碼工具 · Google Cloud Platform</span>
+                <Link href="https://youtu.be/zraaiLWaCUM">成果展示 ↗</Link>
               </div>
             </div>
 
@@ -184,46 +176,41 @@ const CV: React.FC = () => {
                 <span className="text-[10.5pt] font-bold text-black">
                   <Link href="https://www.kaggle.com/competitions/csiro-biomass/overview">Images2Biomass — Kaggle</Link>
                 </span>
-                <span className="text-[10pt] text-black">November 2025</span>
+                <span className="text-[10pt] text-black">2025年11月</span>
               </div>
               <div className="text-[10pt] text-[#444746] mb-1">
-                Australia's national science agency challenge on improving farming with machine learning
+                澳洲國家科學機構利用機器學習改善農業之挑戰賽
               </div>
               <BulletItem>
-                <strong>Fine-tuned DinoV3</strong> to help farmers accurately estimate pasture biomass from top-view images,
-                replacing traditional destructive sampling methods (cut-dry-weigh).
+                <strong>微調DinoV3模型</strong>，協助農民從俯視圖像精確估算牧草生物量，取代傳統破壞性取樣方法（割草乾燥稱重）。
               </BulletItem>
               <BulletItem>
-                <strong>Developed a 5-fold model ensemble</strong> with log-space regression, custom tile cropping, and biomass
-                constraint blending, collaborating in a team of 3.
+                <strong>開發5折模型集成</strong>，結合對數空間回歸、自訂圖塊裁切及生物量約束混合，與3人團隊協作提升預測穩定性。
               </BulletItem>
             </div>
           </Section>
 
           {/* Projects & Ventures */}
-          <Section title="Projects & Ventures">
+          <Section title="專案與創業">
             {/* Warung Bang Jul */}
             <div className="mb-3">
               <div className="flex justify-between items-baseline">
                 <span className="text-[10.5pt] font-bold text-black">
-                  <Link href="https://warungbangjul.vercel.app/">Warung Bang Jul</Link> (Founder), Taiwan
+                  <Link href="https://warungbangjul.vercel.app/">Warung Bang Jul</Link>（創辦人），台灣
                 </span>
                 <div className="flex items-center gap-3 text-[10pt]">
-                  <Link href="https://lnkd.in/gyRUMErr">Demo ↗</Link>
-                  <span className="text-black">March 2025</span>
+                  <Link href="https://lnkd.in/gyRUMErr">貼文 ↗</Link>
+                  <span className="text-black">2025年3月</span>
                 </div>
               </div>
               <BulletItem>
-                <strong>Founded and ran</strong> an online restaurant; built a full-stack automation system (Python/FastAPI +
-                React) that digitizes order processing, inventory management, and business analytics from scratch.
+                <strong>創辦並經營</strong>線上餐廳；以Python/FastAPI + React建置全端自動化系統，從零數位化訂單處理、庫存管理及商業分析。
               </BulletItem>
               <BulletItem>
-                <strong>Trained and deployed</strong> a custom YOLOv11n computer vision model to automate real-time inventory
-                tracking, <strong>optimizing model size by 41%</strong> to meet deployment constraints.
+                <strong>訓練並部署</strong>自訂YOLOv11n電腦視覺模型以自動化即時庫存追蹤，<strong>模型大小優化41%</strong>以符合部署限制。
               </BulletItem>
               <BulletItem>
-                <strong>Shipped and launched to 115 users on day one</strong> with <strong>100% uptime</strong>; set up CI/CD with GitHub Actions
-                and Pytest, deployed on Vercel + Render.
+                <strong>上線首日即吸引115位用戶</strong>，<strong>正常運行率100%</strong>；使用GitHub Actions與Pytest建立CI/CD，部署於Vercel + Render。
               </BulletItem>
             </div>
 
@@ -231,52 +218,48 @@ const CV: React.FC = () => {
             <div className="mb-3">
               <div className="flex justify-between items-baseline">
                 <span className="text-[10.5pt] font-bold text-black">
-                  <Link href="https://github.com/juliobellano/semantic_search/tree/main">Semantic Search</Link>
+                  <Link href="https://github.com/juliobellano/semantic_search/tree/main">語意搜尋系統</Link>
                 </span>
-                <span className="text-[10pt] text-black">November 2025</span>
+                <span className="text-[10pt] text-black">2025年11月</span>
               </div>
               <div className="text-[10pt] text-[#444746] mb-1">
-                EmbeddingGemma · Docling · Vector Database · Python
+                EmbeddingGemma · Docling · 向量資料庫 · Python
               </div>
               <BulletItem>
-                <strong>Built</strong> a local semantic information retrieval system designed to search <strong>hundreds of thousands</strong> of
-                multilingual internal departmental files in various formats without sending data to the cloud.
+                <strong>建立</strong>本地語意資訊檢索系統，設計用於搜尋<strong>數十萬份</strong>多語言內部部門文件，且不需將資料上傳至雲端。
               </BulletItem>
               <BulletItem>
-                Supports <strong>100+ languages</strong> and <strong>10+ document types</strong> (PDF, DOCX, PPTX, XLSX, HTML, audio, etc.)
-                using EmbeddingGemma.
+                使用EmbeddingGemma支援<strong>100種以上語言</strong>及<strong>10種以上文件格式</strong>（PDF、DOCX、PPTX、XLSX、HTML、音訊等）。
               </BulletItem>
             </div>
           </Section>
 
           {/* Leadership */}
-          <Section title="Leadership Experience">
+          <Section title="領導經歷">
             <div className="mb-2">
               <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">Head of Multimedia Director</span>
-                <span className="text-[10pt] text-black">May 2024</span>
+                <span className="text-[10.5pt] font-bold text-black">多媒體部門主任</span>
+                <span className="text-[10pt] text-black">2024年5月</span>
               </div>
               <div className="text-[10pt] italic text-black mb-1">
-                Tamkang University Indonesian Student Association (淡江印尼同學聯誼會)
+                淡江大學印尼同學聯誼會
               </div>
               <BulletItem>
-                <strong>Led a team of 5</strong> organizing an event with 2 local vendors resulting in <strong>150 participants</strong> with a
-                satisfaction rate of <strong>5.7/6.0</strong> — a <strong>6% increase</strong> over the previous year.
+                <strong>帶領5人團隊</strong>與2家在地廠商合辦活動，吸引<strong>150位參與者</strong>，滿意度達<strong>5.7/6.0</strong>，較前一年<strong>提升6%</strong>。
               </BulletItem>
             </div>
           </Section>
 
           {/* Skills */}
-          <Section title="Skills">
+          <Section title="技能">
             <p className="text-[10.5pt] text-black leading-[1.55]">
-              <span className="font-semibold">Cloud & DevOps:</span> Google Cloud Platform, Microsoft Azure,
-              Vercel, Render, CI/CD, Docker
+              <span className="font-semibold">雲端與DevOps：</span>Google Cloud Platform、Microsoft Azure、Vercel、Render、CI/CD、Docker
               <br />
-              <span className="font-semibold">Languages:</span> TypeScript, Python, C#, SQL
+              <span className="font-semibold">程式語言：</span>TypeScript、Python、C#、SQL
               <br />
-              <span className="font-semibold">AI/ML:</span> LLM integration, YOLO, VLA models
+              <span className="font-semibold">AI/機器學習：</span>大型語言模型整合、YOLO、視覺語言動作模型
               <br />
-              <span className="font-semibold">Databases:</span> SQL, NoSQL
+              <span className="font-semibold">資料庫：</span>SQL、NoSQL
             </p>
           </Section>
 
@@ -287,4 +270,4 @@ const CV: React.FC = () => {
   );
 };
 
-export default CV;
+export default CVChinese;
