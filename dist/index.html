@@ -44,6 +44,17 @@
         color: black;
       }
     </style>
+  <script>
+    // GitHub Pages SPA: restore path from query string redirect
+    (function() {
+      var p = new URLSearchParams(window.location.search).get('p');
+      if (p) {
+        var q = new URLSearchParams(window.location.search).get('q');
+        var url = '/' + decodeURIComponent(p) + (q ? '?' + decodeURIComponent(q) : '') + window.location.hash;
+        window.history.replaceState(null, '', url);
+      }
+    })();
+  </script>
 
 <link rel="stylesheet" href="/index.css">
   <script type="importmap">
@@ -56,7 +67,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/assets/index-DonGBu2m.js"></script>
+  <script type="module" crossorigin src="/assets/index-m4TB21wV.js"></script>
 </head>
   <body>
     <div id="root"></div>
