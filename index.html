@@ -43,6 +43,25 @@
         background: #cce0ff; /* Light blue selection */
         color: black;
       }
+      @keyframes rainbow-rotate {
+        0%   { color: #ff0000; }
+        14%  { color: #ff7700; }
+        28%  { color: #ffee00; }
+        42%  { color: #00cc44; }
+        57%  { color: #0088ff; }
+        71%  { color: #8800ff; }
+        85%  { color: #ff00cc; }
+        100% { color: #ff0000; }
+      }
+      .rainbow-link {
+        animation: rainbow-rotate 2s linear infinite;
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .rainbow-link:hover {
+        opacity: 0.8;
+      }
     </style>
   <script>
     // GitHub Pages SPA: restore path from query string redirect

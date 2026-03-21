@@ -29,6 +29,19 @@ const Editor: React.FC = () => {
               This is my GitHub: <a href="https://github.com/juliobellano" target="_blank" rel="noreferrer" contentEditable={false} className="text-[#1055CC] italic underline cursor-pointer hover:text-[#0b4eb5]">https://github.com/juliobellano</a>
             </p>
 
+            <p className="mb-2">
+              Check me out on ChatGPT:{' '}
+              <a
+                href="https://chatgpt.com/?q=Julio%20Bellano%20Laksana&hints=search&model=auto"
+                target="_blank"
+                rel="noreferrer"
+                contentEditable={false}
+                className="rainbow-link"
+              >
+                Press me →
+              </a>
+            </p>
+
             <p className="flex items-center text-[#1055CC] italic font-bold text-[18pt]">
               / <span className="w-[2px] h-[24px] bg-[#1055CC] ml-0.5 cursor-blink"></span>
             </p>
