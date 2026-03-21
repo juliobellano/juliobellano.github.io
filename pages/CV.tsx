@@ -1,32 +1,11 @@
 import React from 'react';
-
-const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-  <div className="mb-5">
-    <div className="text-[11pt] font-bold uppercase tracking-wide text-black border-b border-black pb-0.5 mb-2">
-      {title}
-    </div>
-    {children}
-  </div>
-);
-
-const BulletItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="flex gap-2 text-[10.5pt] leading-[1.5] text-black ml-3">
-    <span className="mt-[3px] shrink-0">•</span>
-    <span>{children}</span>
-  </div>
-);
-
-const Link: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
-  <a href={href} target="_blank" rel="noreferrer" className="text-[#1055CC] hover:underline">
-    {children}
-  </a>
-);
+import { Section, BulletItem, Link } from './CVLayout';
 
 const CV: React.FC = () => {
   return (
     <div className="h-screen bg-[#F9FBFD] flex flex-col overflow-hidden">
       {/* Minimal header bar */}
-      <div className="flex-shrink-0 bg-white border-b border-gray-200 px-4 py-2 flex items-center justify-between">
+      <div className="flex-shrink-0 bg-white border-b border-gray-200 px-3 py-2 flex items-center justify-between flex-wrap gap-y-1">
         <div className="flex items-center gap-3">
           <a
             href="/"
@@ -47,12 +26,12 @@ const CV: React.FC = () => {
       {/* Document area */}
       <div className="flex-1 overflow-y-auto py-8 pb-20">
         <div className="flex justify-center">
-        <div className="bg-white shadow-[0_0_8px_rgba(0,0,0,0.1)] w-[816px] px-[72px] py-[72px]">
+        <div className="bg-white shadow-[0_0_8px_rgba(0,0,0,0.1)] w-full max-w-[816px] px-5 py-8 sm:px-[72px] sm:py-[72px]">
 
           {/* Header */}
           <div className="text-center mb-4">
-            <h1 className="text-[20pt] font-bold text-black">Julio Bellano Laksana</h1>
-            <div className="text-[10pt] text-black mt-1 space-x-1">
+            <h1 className="text-2xl sm:text-[20pt] font-bold text-black">Julio Bellano Laksana</h1>
+            <div className="text-xs sm:text-[10pt] text-black mt-1 flex flex-wrap justify-center gap-x-2 gap-y-1">
               <a href="mailto:juliobellanolaksana@gmail.com" className="text-[#1055CC] hover:underline">
                 juliobellanolaksana@gmail.com
               </a>
@@ -67,7 +46,7 @@ const CV: React.FC = () => {
 
           {/* Summary */}
           <div className="mb-5">
-            <p className="text-[10.5pt] text-black leading-[1.55]">
+            <p className="text-sm sm:text-[10.5pt] text-black leading-[1.55]">
               All-rounder and fast learner computer science graduate with experience <strong>deploying product from 0 to 1</strong> and
               integrating LLMs to solve business challenges. Competed in <strong>2 hackathons</strong>, <strong>1 Kaggle competition</strong>,
               and shipped a production ready tool to reduce Excel and Minitab processing <strong>500M+ data points
@@ -79,14 +58,14 @@ const CV: React.FC = () => {
           {/* Research Experience */}
           <Section title="Research Experience">
             <div className="mb-3">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">
                   TKU Computer Vision and Machine Learning Lab, Taiwan
                 </span>
-                <span className="text-[10pt] text-black">September 2025</span>
+                <span className="text-xs sm:text-[10pt] text-black">September 2025</span>
               </div>
-              <div className="flex justify-between items-baseline mb-1">
-                <span className="text-[10pt] italic text-black">Undergraduate Researcher</span>
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1 mb-1">
+                <span className="text-xs sm:text-[10pt] italic text-black">Undergraduate Researcher</span>
                 <Link href="https://www.linkedin.com/posts/juliobellano_our-second-smolvla-model-is-performing-pretty-activity-7399113701926162432-UsDU?utm_source=share&utm_medium=member_desktop&rcm=ACoAADagySwBbxd9S9B1tXYFqsTHtIVucwd6j20">
                   Demo
                 </Link>
@@ -109,15 +88,15 @@ const CV: React.FC = () => {
           {/* Work Experience */}
           <Section title="Work Experience">
             <div className="mb-3">
-              <div className="text-[10.5pt] font-bold text-black">
+              <div className="text-sm sm:text-[10.5pt] font-bold text-black">
                 <Link href="https://www.shl-medical.com/">Scandinavian Health Limited (SHL Medical)</Link>
               </div>
-              <div className="text-[10pt] text-[#444746] mb-0.5">
+              <div className="text-xs sm:text-[10pt] text-[#444746] mb-0.5">
                 World's no.1 drug delivery device manufacturer (Autoinjectors)
               </div>
-              <div className="flex justify-between items-baseline mb-1">
-                <span className="text-[10pt] italic text-black">Software Developer Intern</span>
-                <span className="text-[10pt] text-black">July 2025 – Present</span>
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1 mb-1">
+                <span className="text-xs sm:text-[10pt] italic text-black">Software Developer Intern</span>
+                <span className="text-xs sm:text-[10pt] text-black">July 2025 – Present</span>
               </div>
               <BulletItem>
                 <strong>Saved 5+ hours weekly</strong> per engineer by reducing Excel and Minitab usage by <strong>50%</strong>, developing
@@ -138,16 +117,16 @@ const CV: React.FC = () => {
           <Section title="Competitions">
             {/* Proactive Live AI Agent */}
             <div className="mb-3">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">
                   Proactive Live AI Agent{' '}
-                  <span className="font-normal text-[10pt]">
+                  <span className="font-normal text-xs sm:text-[10pt]">
                     — <Link href="https://geminiliveagentchallenge.devpost.com/">Google Gemini, Devpost</Link>
                   </span>
                 </span>
-                <span className="text-[10pt] text-black">March 2026</span>
+                <span className="text-xs sm:text-[10pt] text-black">March 2026</span>
               </div>
-              <div className="flex items-center gap-3 text-[10pt] text-[#444746] mb-1">
+              <div className="flex items-center gap-3 text-xs sm:text-[10pt] text-[#444746] mb-1">
                 <span>Agents ADK · WebSocket · Google Cloud Platform</span>
                 <Link href="https://youtu.be/B17bBNdpYOs">Demo ↗</Link>
               </div>
@@ -163,16 +142,16 @@ const CV: React.FC = () => {
 
             {/* Gemini 3 Hackathon */}
             <div className="mb-3">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">
                   Gemini 3 Hackathon{' '}
-                  <span className="font-normal text-[10pt]">
+                  <span className="font-normal text-xs sm:text-[10pt]">
                     — <Link href="https://gdg.community.dev/events/details/google-gdg-stanford-presents-stanford-x-deepmind-hackathon-build-with-google-gemini/">Stanford University</Link>
                   </span>
                 </span>
-                <span className="text-[10pt] text-black">February 2026</span>
+                <span className="text-xs sm:text-[10pt] text-black">February 2026</span>
               </div>
-              <div className="flex items-center gap-3 text-[10pt] text-[#444746]">
+              <div className="flex items-center gap-3 text-xs sm:text-[10pt] text-[#444746]">
                 <span>Agentic Coding Tools · Google Cloud Platform</span>
                 <Link href="https://youtu.be/zraaiLWaCUM">Demo ↗</Link>
               </div>
@@ -180,13 +159,13 @@ const CV: React.FC = () => {
 
             {/* Kaggle */}
             <div className="mb-3">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">
                   <Link href="https://www.kaggle.com/competitions/csiro-biomass/overview">Images2Biomass — Kaggle</Link>
                 </span>
-                <span className="text-[10pt] text-black">November 2025</span>
+                <span className="text-xs sm:text-[10pt] text-black">November 2025</span>
               </div>
-              <div className="text-[10pt] text-[#444746] mb-1">
+              <div className="text-xs sm:text-[10pt] text-[#444746] mb-1">
                 Australia's national science agency challenge on improving farming with machine learning
               </div>
               <BulletItem>
@@ -204,11 +183,11 @@ const CV: React.FC = () => {
           <Section title="Projects & Ventures">
             {/* Warung Bang Jul */}
             <div className="mb-3">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">
                   <Link href="https://warungbangjul.vercel.app/">Warung Bang Jul</Link> (Founder), Taiwan
                 </span>
-                <div className="flex items-center gap-3 text-[10pt]">
+                <div className="flex items-center gap-3 text-xs sm:text-[10pt]">
                   <Link href="https://lnkd.in/gyRUMErr">Demo ↗</Link>
                   <span className="text-black">March 2025</span>
                 </div>
@@ -229,13 +208,13 @@ const CV: React.FC = () => {
 
             {/* Semantic Search */}
             <div className="mb-3">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">
                   <Link href="https://github.com/juliobellano/semantic_search/tree/main">Semantic Search</Link>
                 </span>
-                <span className="text-[10pt] text-black">November 2025</span>
+                <span className="text-xs sm:text-[10pt] text-black">November 2025</span>
               </div>
-              <div className="text-[10pt] text-[#444746] mb-1">
+              <div className="text-xs sm:text-[10pt] text-[#444746] mb-1">
                 EmbeddingGemma · Docling · Vector Database · Python
               </div>
               <BulletItem>
@@ -252,11 +231,11 @@ const CV: React.FC = () => {
           {/* Leadership */}
           <Section title="Leadership Experience">
             <div className="mb-2">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">Head of Multimedia Director</span>
-                <span className="text-[10pt] text-black">May 2024</span>
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">Head of Multimedia Director</span>
+                <span className="text-xs sm:text-[10pt] text-black">May 2024</span>
               </div>
-              <div className="text-[10pt] italic text-black mb-1">
+              <div className="text-xs sm:text-[10pt] italic text-black mb-1">
                 Tamkang University Indonesian Student Association (淡江印尼同學聯誼會)
               </div>
               <BulletItem>
@@ -268,7 +247,7 @@ const CV: React.FC = () => {
 
           {/* Skills */}
           <Section title="Skills">
-            <p className="text-[10.5pt] text-black leading-[1.55]">
+            <p className="text-sm sm:text-[10.5pt] text-black leading-[1.55]">
               <span className="font-semibold">Cloud & DevOps:</span> Google Cloud Platform, Microsoft Azure,
               Vercel, Render, CI/CD, Docker
               <br />

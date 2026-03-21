@@ -1,32 +1,11 @@
 import React from 'react';
-
-const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-  <div className="mb-5">
-    <div className="text-[11pt] font-bold uppercase tracking-wide text-black border-b border-black pb-0.5 mb-2">
-      {title}
-    </div>
-    {children}
-  </div>
-);
-
-const BulletItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="flex gap-2 text-[10.5pt] leading-[1.5] text-black ml-3">
-    <span className="mt-[3px] shrink-0">•</span>
-    <span>{children}</span>
-  </div>
-);
-
-const Link: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
-  <a href={href} target="_blank" rel="noreferrer" className="text-[#1055CC] hover:underline">
-    {children}
-  </a>
-);
+import { Section, BulletItem, Link } from './CVLayout';
 
 const CVChinese: React.FC = () => {
   return (
     <div className="h-screen bg-[#F9FBFD] flex flex-col overflow-hidden">
       {/* Minimal header bar */}
-      <div className="flex-shrink-0 bg-white border-b border-gray-200 px-4 py-2 flex items-center justify-between">
+      <div className="flex-shrink-0 bg-white border-b border-gray-200 px-3 py-2 flex items-center justify-between flex-wrap gap-y-1">
         <div className="flex items-center gap-3">
           <a
             href="/"
@@ -47,12 +26,12 @@ const CVChinese: React.FC = () => {
       {/* Document area */}
       <div className="flex-1 overflow-y-auto py-8 pb-20">
         <div className="flex justify-center">
-        <div className="bg-white shadow-[0_0_8px_rgba(0,0,0,0.1)] w-[816px] px-[72px] py-[72px]">
+        <div className="bg-white shadow-[0_0_8px_rgba(0,0,0,0.1)] w-full max-w-[816px] px-5 py-8 sm:px-[72px] sm:py-[72px]">
 
           {/* Header */}
           <div className="text-center mb-4">
-            <h1 className="text-[20pt] font-bold text-black">鍾國榮 Julio Bellano Laksana</h1>
-            <div className="text-[10pt] text-black mt-1 space-x-1">
+            <h1 className="text-2xl sm:text-[20pt] font-bold text-black">鍾國榮 Julio Bellano Laksana</h1>
+            <div className="text-xs sm:text-[10pt] text-black mt-1 flex flex-wrap justify-center gap-x-2 gap-y-1">
               <a href="mailto:juliobellanolaksana@gmail.com" className="text-[#1055CC] hover:underline">
                 juliobellanolaksana@gmail.com
               </a>
@@ -67,7 +46,7 @@ const CVChinese: React.FC = () => {
 
           {/* Summary */}
           <div className="mb-5">
-            <p className="text-[10.5pt] text-black leading-[1.55]">
+            <p className="text-sm sm:text-[10.5pt] text-black leading-[1.55]">
               全方位且學習能力強的資訊工程畢業生，擁有<strong>從零到一部署產品</strong>及整合大型語言模型解決商業問題的經驗。曾參加
               <strong>2場黑客松</strong>、<strong>1場Kaggle競賽</strong>，並在{' '}
               <Link href="https://www.shl-medical.com/">SHL Medical</Link>{' '}
@@ -78,14 +57,14 @@ const CVChinese: React.FC = () => {
           {/* Research Experience */}
           <Section title="研究經歷">
             <div className="mb-3">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">
                   淡江大學電腦視覺與機器學習實驗室，台灣
                 </span>
-                <span className="text-[10pt] text-black">2025年9月</span>
+                <span className="text-xs sm:text-[10pt] text-black">2025年9月</span>
               </div>
-              <div className="flex justify-between items-baseline mb-1">
-                <span className="text-[10pt] italic text-black">大學部研究員</span>
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1 mb-1">
+                <span className="text-xs sm:text-[10pt] italic text-black">大學部研究員</span>
                 <Link href="https://www.linkedin.com/posts/juliobellano_our-second-smolvla-model-is-performing-pretty-activity-7399113701926162432-UsDU?utm_source=share&utm_medium=member_desktop&rcm=ACoAADagySwBbxd9S9B1tXYFqsTHtIVucwd6j20">
                   成果展示
                 </Link>
@@ -106,15 +85,15 @@ const CVChinese: React.FC = () => {
           {/* Work Experience */}
           <Section title="工作經歷">
             <div className="mb-3">
-              <div className="text-[10.5pt] font-bold text-black">
+              <div className="text-sm sm:text-[10.5pt] font-bold text-black">
                 <Link href="https://www.shl-medical.com/">斯堪地那維亞健康有限公司（SHL Medical）</Link>
               </div>
-              <div className="text-[10pt] text-[#444746] mb-0.5">
+              <div className="text-xs sm:text-[10pt] text-[#444746] mb-0.5">
                 全球第一大藥物輸送裝置製造商（自動注射器）
               </div>
-              <div className="flex justify-between items-baseline mb-1">
-                <span className="text-[10pt] italic text-black">軟體開發實習生</span>
-                <span className="text-[10pt] text-black">2025年7月 – 至今</span>
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1 mb-1">
+                <span className="text-xs sm:text-[10pt] italic text-black">軟體開發實習生</span>
+                <span className="text-xs sm:text-[10pt] text-black">2025年7月 – 至今</span>
               </div>
               <BulletItem>
                 <strong>每位工程師每週節省5小時以上</strong>，透過開發以.NET C#、React及SQL建置的內部互動工具，將Excel與Minitab使用率降低<strong>50%</strong>，每日分析<strong>5億以上數據點</strong>。
@@ -132,16 +111,16 @@ const CVChinese: React.FC = () => {
           <Section title="競賽經歷">
             {/* Proactive Live AI Agent */}
             <div className="mb-3">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">
                   主動式即時AI代理{' '}
-                  <span className="font-normal text-[10pt]">
+                  <span className="font-normal text-xs sm:text-[10pt]">
                     — <Link href="https://geminiliveagentchallenge.devpost.com/">Google Gemini, Devpost</Link>
                   </span>
                 </span>
-                <span className="text-[10pt] text-black">2026年3月</span>
+                <span className="text-xs sm:text-[10pt] text-black">2026年3月</span>
               </div>
-              <div className="flex items-center gap-3 text-[10pt] text-[#444746] mb-1">
+              <div className="flex items-center gap-3 text-xs sm:text-[10pt] text-[#444746] mb-1">
                 <span>Agents ADK · WebSocket · Google Cloud Platform</span>
                 <Link href="https://youtu.be/B17bBNdpYOs">成果展示 ↗</Link>
               </div>
@@ -155,16 +134,16 @@ const CVChinese: React.FC = () => {
 
             {/* Gemini 3 Hackathon */}
             <div className="mb-3">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">
                   Gemini 3 黑客松{' '}
-                  <span className="font-normal text-[10pt]">
+                  <span className="font-normal text-xs sm:text-[10pt]">
                     — <Link href="https://gdg.community.dev/events/details/google-gdg-stanford-presents-stanford-x-deepmind-hackathon-build-with-google-gemini/">史丹佛大學</Link>
                   </span>
                 </span>
-                <span className="text-[10pt] text-black">2026年2月</span>
+                <span className="text-xs sm:text-[10pt] text-black">2026年2月</span>
               </div>
-              <div className="flex items-center gap-3 text-[10pt] text-[#444746]">
+              <div className="flex items-center gap-3 text-xs sm:text-[10pt] text-[#444746]">
                 <span>智能代碼工具 · Google Cloud Platform</span>
                 <Link href="https://youtu.be/zraaiLWaCUM">成果展示 ↗</Link>
               </div>
@@ -172,13 +151,13 @@ const CVChinese: React.FC = () => {
 
             {/* Kaggle */}
             <div className="mb-3">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">
                   <Link href="https://www.kaggle.com/competitions/csiro-biomass/overview">Images2Biomass — Kaggle</Link>
                 </span>
-                <span className="text-[10pt] text-black">2025年11月</span>
+                <span className="text-xs sm:text-[10pt] text-black">2025年11月</span>
               </div>
-              <div className="text-[10pt] text-[#444746] mb-1">
+              <div className="text-xs sm:text-[10pt] text-[#444746] mb-1">
                 澳洲國家科學機構利用機器學習改善農業之挑戰賽
               </div>
               <BulletItem>
@@ -194,11 +173,11 @@ const CVChinese: React.FC = () => {
           <Section title="專案與創業">
             {/* Warung Bang Jul */}
             <div className="mb-3">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">
                   <Link href="https://warungbangjul.vercel.app/">Warung Bang Jul</Link>（創辦人），台灣
                 </span>
-                <div className="flex items-center gap-3 text-[10pt]">
+                <div className="flex items-center gap-3 text-xs sm:text-[10pt]">
                   <Link href="https://lnkd.in/gyRUMErr">貼文 ↗</Link>
                   <span className="text-black">2025年3月</span>
                 </div>
@@ -216,13 +195,13 @@ const CVChinese: React.FC = () => {
 
             {/* Semantic Search */}
             <div className="mb-3">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">
                   <Link href="https://github.com/juliobellano/semantic_search/tree/main">語意搜尋系統</Link>
                 </span>
-                <span className="text-[10pt] text-black">2025年11月</span>
+                <span className="text-xs sm:text-[10pt] text-black">2025年11月</span>
               </div>
-              <div className="text-[10pt] text-[#444746] mb-1">
+              <div className="text-xs sm:text-[10pt] text-[#444746] mb-1">
                 EmbeddingGemma · Docling · 向量資料庫 · Python
               </div>
               <BulletItem>
@@ -237,11 +216,11 @@ const CVChinese: React.FC = () => {
           {/* Leadership */}
           <Section title="領導經歷">
             <div className="mb-2">
-              <div className="flex justify-between items-baseline">
-                <span className="text-[10.5pt] font-bold text-black">多媒體部門主任</span>
-                <span className="text-[10pt] text-black">2024年5月</span>
+              <div className="flex flex-wrap justify-between items-baseline gap-y-1">
+                <span className="text-sm sm:text-[10.5pt] font-bold text-black">多媒體部門主任</span>
+                <span className="text-xs sm:text-[10pt] text-black">2024年5月</span>
               </div>
-              <div className="text-[10pt] italic text-black mb-1">
+              <div className="text-xs sm:text-[10pt] italic text-black mb-1">
                 淡江大學印尼同學聯誼會
               </div>
               <BulletItem>
@@ -252,7 +231,7 @@ const CVChinese: React.FC = () => {
 
           {/* Skills */}
           <Section title="技能">
-            <p className="text-[10.5pt] text-black leading-[1.55]">
+            <p className="text-sm sm:text-[10.5pt] text-black leading-[1.55]">
               <span className="font-semibold">雲端與DevOps：</span>Google Cloud Platform、Microsoft Azure、Vercel、Render、CI/CD、Docker
               <br />
               <span className="font-semibold">程式語言：</span>TypeScript、Python、C#、SQL
