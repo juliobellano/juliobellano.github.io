@@ -30,9 +30,9 @@ const Editor: React.FC = () => {
             </p>
 
             <p className="mb-2">
-              Check me out on ChatGPT:{' '}
+              Check me out on GoOgLe:{' '}
               <a
-                href="https://chatgpt.com/?q=Who%20is%20Julio%20Bellano%20Laksana&hints=search&model=auto"
+                href="https://www.google.com/search?q=Who+is+Julio+Bellano+Laksana&udm=50"
                 target="_blank"
                 rel="noreferrer"
                 contentEditable={false}
