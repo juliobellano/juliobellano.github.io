@@ -34,7 +34,7 @@ const Editor: React.FC = () => {
         >
           <div
             className="
-              font-sans
+              google-sans
               text-[13pt]
               text-[#202124]
               leading-[1.6]
