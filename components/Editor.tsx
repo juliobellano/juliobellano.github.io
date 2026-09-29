@@ -32,7 +32,7 @@ const Editor: React.FC = () => {
             <p className="mb-2">
               Check me out on ChatGPT:{' '}
               <a
-                href="https://chatgpt.com/?q=Julio%20Bellano%20Laksana&hints=search&model=auto"
+                href="https://chatgpt.com/?q=Who%20is%20Julio%20Bellano%20Laksana&hints=search&model=auto"
                 target="_blank"
                 rel="noreferrer"
                 contentEditable={false}
